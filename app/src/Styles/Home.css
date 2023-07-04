@@ -1,0 +1,70 @@
+/* Home.css */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap-reverse; /* Reverse the wrapping order of flex items */
+}
+
+.text-container {
+  flex: 1; /* Take up remaining space */
+  max-width: 800px;
+  margin-right: 80px; /* Increase the gap between text and image */
+}
+
+h1 {
+  color: #333;
+  font-size: 48px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+p {
+  color: #777;
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.button {
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+.profile-picture {
+  width:200px;
+  height: 300px;
+  border-radius: 50%;
+  margin-top: 40px; /* Increase the gap between text and image */
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
