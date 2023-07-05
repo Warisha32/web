@@ -5,7 +5,7 @@ import "../Styles/Home.css"
 
 import { useNavigate } from 'react-router-dom';
 
-import profilePicture from "../Assets/profile-picture.jpg" // Import your personal picture
+import profilePicture from "../Assets/profile-picture.jpg"
 
 const Home = () => {
   const navigate = useNavigate();

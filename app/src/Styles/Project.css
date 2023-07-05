@@ -1,18 +1,118 @@
 /* Projects.css */
-h1 {
-    color: #333;
-    font-size: 24px;
+
+.projects-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.cards-container {
+  display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: flex-start;
+}
+
+.card {
+  width: calc(50% - 20px);
+  margin: 10px;
+  padding: 50px;
+  background-color: #000;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card:before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+  border-radius: 10px;
+  opacity: 0;
+  transform: scale(0);
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.card:hover:before {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.card-content {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.card:hover .card-content {
+  opacity: 1;
+}
+
+.card-title {
+  font-size: 24px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.card-description {
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.view-project-button {
+  display: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #fff;
+  color: #333;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.card:hover .view-project-button {
+  display: inline-block;
+}
+
+.view-project-button:hover {
+  background-color: #555;
+  color: #fff;
+}
+
+/* Card Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  
-  ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  li {
-    color: #777;
-    font-size: 16px;
-    margin-bottom: 10px;
-  }
-  
+}
+
+.card {
+  animation: fadeIn 0.6s ease-in-out;
+  animation-fill-mode: backwards;
+}
