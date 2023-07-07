@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import emailjs from 'emailjs-com';
 import "../Styles/Contact.css";
 
 const Contact = () => {
+    const form=useRef();
   const handleSubmit = (e) => {
     e.preventDefault();
     emailjs.sendForm('service_y7y6ybt', 'template_jvpyu0p', e.target, 'WQn-exiYhOo_HcMSd')
