@@ -19,7 +19,7 @@ const projects = [
   {
     id: 3,
     title: 'Covid Info',
-    description: 'Description of Project 2',
+    description: 'a web application that serves as a repository of pan-India updated covidfl19 resources and information with clearly demarcated sections for each resource like oxygen, ambulance etc',
     link: 'https://project2link.com',
   },
  
